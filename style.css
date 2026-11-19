@@ -1,0 +1,2312 @@
+
+/* =========================================
+   1. CSS RESET
+========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    width: 100%;
+    font-family: Georgia, 'Times New Roman', serif;
+    overflow-x: hidden;
+}
+
+
+/* =========================================
+   2. HERO SECTION
+========================================= */
+
+.hero {
+    width: 100%;
+    height: 100vh;
+    min-height: 600px;
+    max-height: 850px;
+
+    position: relative;
+    overflow: hidden;
+
+    background-color: #8fa58d;
+}
+
+
+/* Right Side Botanical Background */
+
+.hero::before {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    right: 0;
+
+    width: 50%;
+    height: 100%;
+
+    background-color: #10251b;
+
+    background-image:
+        url("/images/hero\ background.png");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    z-index: 0;
+}
+
+
+/* =========================================
+   3. NAVBAR
+========================================= */
+
+.navbar {
+    width: 100%;
+
+    padding: 24px 5%;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    z-index: 10;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+
+/* Logo */
+
+.logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.logo-name {
+    font-size: 19px;
+    letter-spacing: 3px;
+}
+
+.logo-subtitle {
+    font-size: 9px;
+    font-style: italic;
+    letter-spacing: 0.5px;
+}
+
+
+/* Navigation */
+
+.nav-links {
+    display: flex;
+    align-items: center;
+
+    gap: 35px;
+}
+
+.nav-links a {
+    color: #ffffff;
+
+    font-family: Arial, sans-serif;
+    font-size: 10px;
+
+    text-decoration: none;
+
+    transition: opacity 0.3s ease;
+}
+
+.nav-links a:hover {
+    opacity: 0.65;
+}
+
+
+/* =========================================
+   4. PRODUCT IMAGE
+========================================= */
+
+.hero-product {
+    position: absolute;
+
+    left: 15%;
+    bottom: -5px;
+
+    height: 90%;
+
+    z-index: 2;
+}
+
+.hero-product img {
+    display: block;
+
+    height: 100%;
+    width: auto;
+
+    object-fit: contain;
+}
+
+
+/* =========================================
+   5. HERO CONTENT
+========================================= */
+
+/* HERO CONTENT */
+
+.hero-content {
+    position: absolute;
+
+    top: 25%;
+    left: 39%;
+
+    width: 59%;
+    max-width: 850px;
+
+    z-index: 3;
+}
+
+/* MAIN HEADING */
+
+.hero-content h1 {
+    color: #f4f4ed;
+
+    font-size: clamp(46px, 7.5vw, 86px);
+
+    font-weight: 400;
+
+    line-height: 1.07;
+
+    letter-spacing: -3px;
+}
+
+
+ /* SHOP BUTTON */
+
+.shop-button {
+    width: 185px;
+
+    height: 38px;
+
+    padding: 0 18px;
+
+    margin-top: 42px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    background-color: #f4f5ef;
+
+    color: #263d2d;
+
+    font-family: Arial, sans-serif;
+    font-size: 13px;
+
+    text-decoration: none;
+}
+
+.button-arrow {
+    font-size: 21px;
+}
+/* =========================================
+   6. SIDE CONTROLS
+========================================= */
+
+.hero-controls {
+    position: absolute;
+
+    left: 8%;
+    top: 42%;
+
+    z-index: 4;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    gap: 15px;
+
+    color: #ffffff;
+    font-size: 20px;
+}
+
+.control-dots {
+    font-size: 16px;
+}
+
+
+/* =========================================
+   7. MOBILE MENU BUTTON
+========================================= */
+
+.menu-toggle {
+    display: none;
+
+    background: none;
+    border: none;
+
+    cursor: pointer;
+}
+
+
+/* =========================================
+   8. TABLET RESPONSIVE
+========================================= */
+
+@media (min-width: 769px) and (max-width: 1050px) {
+
+    .nav-links {
+        gap: 18px;
+    }
+
+    .hero-product {
+        left: 9%;
+        height: 82%;
+    }
+
+    .hero-content {
+        left: 36%;
+        width: 62%;
+    }
+
+    .hero-content h1 {
+        font-size: clamp(43px, 6.3vw, 65px);
+    }
+
+}
+
+
+/* =========================================
+   9. MOBILE RESPONSIVE
+========================================= */
+
+@media (max-width: 768px) {
+
+    /* Hero */
+
+    .hero {
+        height: 760px;
+        min-height: 760px;
+        max-height: none;
+
+        background-color: #8fa58d;
+    }
+
+
+    /* Mobile Background */
+
+    .hero::before {
+        top: 52%;
+        right: 0;
+
+        width: 100%;
+        height: 48%;
+
+        background-position: center;
+    }
+
+
+    /* Navbar */
+
+    .navbar {
+        padding: 22px 6%;
+
+        align-items: center;
+    }
+
+
+    /* Logo */
+
+    .logo-name {
+        font-size: 17px;
+    }
+
+
+    /* Mobile Menu Button */
+
+    .menu-toggle {
+        display: flex;
+        flex-direction: column;
+
+        gap: 5px;
+
+        padding: 5px;
+    }
+
+    .menu-toggle span {
+        width: 25px;
+        height: 1px;
+
+        background-color: #ffffff;
+    }
+
+
+    /* Mobile Navigation */
+
+    .nav-links {
+        display: none;
+
+        position: absolute;
+
+        top: 75px;
+        right: 6%;
+
+        width: 180px;
+
+        padding: 22px;
+
+        flex-direction: column;
+        align-items: flex-start;
+
+        gap: 22px;
+
+        background-color: #263d2d;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+
+    /* Mobile Heading */
+
+    .hero-content {
+        top: 17%;
+        left: 5%;
+
+        width: 90%;
+
+        text-align: center;
+    }
+
+    .hero-content h1 {
+        font-size: clamp(37px, 9vw, 55px);
+
+        line-height: 1.05;
+
+        letter-spacing: -2px;
+    }
+
+
+    /* Mobile Button */
+
+    .shop-button {
+        width: 170px;
+
+        margin: 24px auto 0;
+
+        padding: 12px 16px;
+    }
+
+
+    /* Mobile Product */
+
+    .hero-product {
+        height: 48%;
+
+        left: 8%;
+        bottom: 0;
+    }
+
+    .hero-product img {
+        height: 100%;
+    }
+
+
+    /* Side Controls */
+
+    .hero-controls {
+        display: none;
+    }
+
+}
+
+
+/* =========================================
+   10. SMALL MOBILE
+========================================= */
+
+@media (max-width: 380px) {
+
+    .hero {
+        height: 700px;
+        min-height: 700px;
+    }
+
+    .hero-content {
+        top: 19%;
+    }
+
+    .hero-content h1 {
+        font-size: 36px;
+    }
+
+    .hero-product {
+        height: 44%;
+        left: 5%;
+    }
+
+}
+
+
+
+
+
+
+
+/* =========================================
+   BENEFITS SECTION - DESKTOP
+========================================= */
+
+.benefits-section {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    min-height: 325px;
+}
+
+/* LEFT SIDE */
+
+.benefits-left {
+    background-color: #f2f6ef;
+    padding: 32px 45px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: hidden;
+}
+
+.benefits-left h2 {
+    font-family: Georgia, serif;
+    font-size: 32px;
+    font-weight: 400;
+    line-height: 1.15;
+    color: #263d2c;
+    margin: 0;
+}
+
+.benefits-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.benefits-image img {
+    width: 75%;
+    max-width: 340px;
+    height: auto;
+    object-fit: contain;
+}
+
+/* RIGHT SIDE */
+
+.benefits-right {
+    background-color: #e7efe3;
+    padding: 35px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 22px;
+}
+
+.benefit-item {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+
+.benefit-icon {
+    width: 52px;
+    min-width: 52px;
+    height: 52px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #829b7d;
+}
+
+.benefit-icon svg {
+    width: 100%;
+    height: 100%;
+}
+
+.benefit-text h3 {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    color: #293d2d;
+    margin: 0 0 5px;
+}
+
+.benefit-text p {
+    font-family: Arial, sans-serif;
+    font-size: 11px;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #617860;
+    margin: 0;
+}
+
+
+/* =========================================
+   LARGE LAPTOPS
+========================================= */
+
+@media (max-width: 1200px) {
+
+    .benefits-left {
+        padding: 30px 35px;
+    }
+
+    .benefits-left h2 {
+        font-size: 30px;
+    }
+
+    .benefits-right {
+        padding: 30px;
+    }
+
+}
+
+
+/* =========================================
+   TABLETS
+========================================= */
+
+@media (max-width: 900px) {
+
+    .benefits-section {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .benefits-left {
+        padding: 25px 20px;
+    }
+
+    .benefits-left h2 {
+        font-size: 26px;
+    }
+
+    .benefits-image img {
+        width: 90%;
+    }
+
+    .benefits-right {
+        padding: 25px 18px;
+        gap: 20px;
+    }
+
+    .benefit-item {
+        gap: 12px;
+    }
+
+    .benefit-icon {
+        width: 45px;
+        min-width: 45px;
+        height: 45px;
+    }
+
+    .benefit-text h3 {
+        font-size: 15px;
+    }
+
+    .benefit-text p {
+        font-size: 10px;
+    }
+
+}
+
+
+/* =========================================
+   MOBILE DEVICES
+========================================= */
+
+@media (max-width: 600px) {
+
+    .benefits-section {
+        grid-template-columns: 1fr;
+    }
+
+    /* LEFT SIDE */
+
+    .benefits-left {
+        min-height: 350px;
+        padding: 30px 25px;
+    }
+
+    .benefits-left h2 {
+        font-size: 29px;
+        line-height: 1.2;
+    }
+
+    .benefits-image {
+        margin-top: 25px;
+    }
+
+    .benefits-image img {
+        width: 80%;
+        max-width: 300px;
+    }
+
+    /* RIGHT SIDE */
+
+    .benefits-right {
+        padding: 35px 25px;
+        gap: 30px;
+    }
+
+    .benefit-item {
+        gap: 15px;
+    }
+
+    .benefit-icon {
+        width: 48px;
+        min-width: 48px;
+        height: 48px;
+    }
+
+    .benefit-text h3 {
+        font-size: 16px;
+    }
+
+    .benefit-text p {
+        font-size: 12px;
+        line-height: 1.6;
+    }
+
+}
+
+
+/* =========================================
+   SMALL MOBILE DEVICES
+========================================= */
+
+@media (max-width: 380px) {
+
+    .benefits-left {
+        padding: 25px 18px;
+        min-height: 320px;
+    }
+
+    .benefits-left h2 {
+        font-size: 25px;
+    }
+
+    .benefits-image img {
+        width: 90%;
+    }
+
+    .benefits-right {
+        padding: 30px 18px;
+        gap: 25px;
+    }
+
+    .benefit-item {
+        gap: 12px;
+    }
+
+    .benefit-icon {
+        width: 42px;
+        min-width: 42px;
+        height: 42px;
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+/* =================================
+   UPDATED BENEFITS SECTION
+================================= */
+
+/* LEFT SIDE HEADING */
+
+.benefits-left h2 {
+    width: 100%;
+    font-size: 40px;
+    line-height: 1.2;
+    text-align: center;
+    font-weight: 400;
+    margin-bottom: 25px;
+}
+
+/* LEFT SIDE IMAGE */
+
+.benefits-image {
+    margin-top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.benefits-image img {
+    width: 85%;
+    max-width: 360px;
+}
+
+/* RIGHT SIDE HEADINGS */
+
+.benefit-text h3 {
+    font-size: 19px;
+    margin-bottom: 7px;
+}
+
+/* RIGHT SIDE PARAGRAPHS */
+
+.benefit-text p {
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+
+/* TABLET */
+
+@media (max-width: 900px) {
+
+    .benefits-left h2 {
+        font-size: 32px;
+    }
+
+    .benefit-text h3 {
+        font-size: 17px;
+    }
+
+    .benefit-text p {
+        font-size: 12px;
+    }
+
+}
+
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+
+    .benefits-left h2 {
+        font-size: 32px;
+        text-align: center;
+    }
+
+    .benefits-image img {
+        width: 80%;
+    }
+
+    .benefit-text h3 {
+        font-size: 18px;
+    }
+
+    .benefit-text p {
+        font-size: 13px;
+    }
+
+}
+
+
+/* SMALL MOBILE */
+
+@media (max-width: 380px) {
+
+    .benefits-left h2 {
+        font-size: 27px;
+    }
+
+    .benefit-text h3 {
+        font-size: 16px;
+    }
+
+    .benefit-text p {
+        font-size: 12px;
+    }
+
+}
+
+
+
+
+
+/* ================================
+   FEATURED PRODUCTS SECTION
+================================ */
+
+.featured-products {
+  width: 100%;
+  background-color: #ffffff;
+}
+
+/* Heading */
+
+.featured-heading {
+  text-align: center;
+  padding: 20px 15px 40px;
+  border-bottom: 1px solid #dce5d8;
+}
+
+.featured-heading p {
+  color: #8da18a;
+  font-size: 16px;
+  font-weight: 300;
+  margin-bottom: 10px;
+}
+
+.featured-heading h2 {
+  color: #253d29;
+  font-family: Georgia, serif;
+  font-size: 34px;
+  font-weight: 400;
+  line-height: 1.12;
+  margin: 0;
+}
+
+/* Products layout */
+
+.products-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  width: 100%;
+}
+
+/* Product card */
+
+.product-card {
+  min-width: 0;
+  padding: 17px 18px 15px;
+  border-right: 1px solid #dce5d8;
+}
+
+.product-card:last-child {
+  border-right: none;
+}
+
+/* Product image */
+
+.product-image {
+  width: 100%;
+  aspect-ratio: 0.785;
+  background-color: #e7ede3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.product-image img {
+  width: 75%;
+  height: 85%;
+  object-fit: contain;
+  display: block;
+}
+
+/* Middle product oval background */
+
+.featured-middle .product-image {
+  background-color: transparent;
+  position: relative;
+}
+
+.featured-middle .product-image::before {
+  content: "";
+  position: absolute;
+  width: 94%;
+  height: 100%;
+  background-color: #e7ede3;
+  border-radius: 50%;
+}
+
+.featured-middle .product-image img {
+  position: relative;
+  z-index: 1;
+}
+
+/* Product information */
+
+.product-info {
+  padding-top: 13px;
+}
+
+.product-name {
+  color: #304633;
+  font-size: 15px;
+  font-weight: 400;
+  margin: 0 0 7px;
+}
+
+.product-details {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+}
+
+.product-price {
+  color: #263c2a;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.product-rating {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  white-space: nowrap;
+}
+
+.stars {
+  color: #405c40;
+  font-size: 14px;
+  letter-spacing: 1px;
+}
+
+.rating-number {
+  color: #536d52;
+  font-size: 12px;
+}
+
+/* ================================
+   TABLET RESPONSIVE
+================================ */
+
+@media (max-width: 768px) {
+
+  .featured-heading h2 {
+    font-size: 30px;
+  }
+
+  .product-card {
+    padding: 14px 12px;
+  }
+
+  .product-name {
+    font-size: 13px;
+  }
+
+  .stars {
+    font-size: 12px;
+    letter-spacing: 0;
+  }
+
+  .product-rating {
+    gap: 4px;
+  }
+
+}
+
+/* ================================
+   MOBILE RESPONSIVE
+================================ */
+
+@media (max-width: 600px) {
+
+  .featured-heading {
+    padding: 30px 15px;
+  }
+
+  .featured-heading p {
+    font-size: 14px;
+  }
+
+  .featured-heading h2 {
+    font-size: 27px;
+    line-height: 1.2;
+  }
+
+  .featured-heading h2 br {
+    display: none;
+  }
+
+  .products-container {
+    grid-template-columns: 1fr;
+  }
+
+  .product-card {
+    padding: 20px;
+    border-right: none;
+    border-bottom: 1px solid #dce5d8;
+  }
+
+  .product-card:last-child {
+    border-bottom: none;
+  }
+
+  .product-image {
+    max-width: 350px;
+    margin: 0 auto;
+    aspect-ratio: 0.9;
+  }
+
+  .product-image img {
+    width: 70%;
+    height: 85%;
+  }
+
+  .featured-middle .product-image {
+    max-width: 350px;
+  }
+
+  .product-info {
+    max-width: 350px;
+    margin: 0 auto;
+  }
+
+  .product-name {
+    font-size: 15px;
+  }
+
+  .product-price {
+    font-size: 14px;
+  }
+
+  .stars {
+    font-size: 14px;
+  }
+
+}
+
+
+
+
+
+/* =====================================
+   ABOUT / ALL PRODUCTS SECTION
+===================================== */
+
+.about-products {
+  width: 100%;
+  background-color: #f1f5ee;
+  scroll-margin-top: 80px;
+}
+
+/* Top Green Banner */
+
+.about-banner {
+  width: 100%;
+  min-height: 58px;
+  padding: 12px 38px;
+  background-color: #8da28b;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.about-banner p {
+  color: #ffffff;
+  font-family: Georgia, serif;
+  font-size: 19px;
+  font-weight: 400;
+  margin: 0;
+}
+
+.banner-arrow {
+  color: #ffffff;
+  font-size: 34px;
+  font-weight: 300;
+  line-height: 1;
+}
+
+/* Main Content Layout */
+
+.about-products-content {
+  width: 100%;
+  padding: 36px 6.7% 40px;
+  display: grid;
+  grid-template-columns: 1fr 1.15fr;
+  column-gap: 45px;
+  align-items: start;
+}
+
+/* Left Side */
+
+.about-info {
+  padding-top: 2px;
+}
+
+.about-label {
+  color: #8da28b;
+  font-size: 13px;
+  font-weight: 400;
+  margin: 0 0 8px;
+}
+
+.about-info h2 {
+  max-width: 330px;
+  color: #253d29;
+  font-family: Georgia, serif;
+  font-size: 29px;
+  font-weight: 400;
+  line-height: 1.15;
+  margin: 0 0 20px;
+}
+
+/* Benefit Tags */
+
+.benefits-list {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 7px 6px;
+  max-width: 390px;
+}
+
+.benefit {
+  min-height: 23px;
+  padding: 5px 11px;
+  border: 1px solid #d8e4d4;
+  border-radius: 30px;
+  color: #91a58e;
+  font-size: 10px;
+  font-weight: 400;
+  line-height: 1.2;
+  white-space: nowrap;
+}
+
+.benefit.active {
+  color: #304832;
+  background-color: #e3ecdf;
+  border-color: #e3ecdf;
+}
+
+/* Right Side */
+
+.about-products-right {
+  width: 100%;
+  max-width: 500px;
+  justify-self: end;
+}
+
+/* Product Grid */
+
+.about-product-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 15px;
+}
+
+/* Product Card */
+
+.about-product-card {
+  min-width: 0;
+  border: 1px solid #dce6d8;
+  background-color: #f1f5ee;
+}
+
+/* Product Image */
+
+.about-product-image {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  background-color: #e4ebdf;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.about-product-image img {
+  width: 76%;
+  height: 82%;
+  object-fit: contain;
+  display: block;
+}
+
+/* Product Details */
+
+.about-product-info {
+  padding: 10px 9px 11px;
+}
+
+.about-product-name {
+  color: #405342;
+  font-size: 11px;
+  font-weight: 400;
+  margin: 0 0 6px;
+}
+
+.about-product-price {
+  color: #263d2b;
+  font-size: 11px;
+  font-weight: 700;
+  margin: 0 0 5px;
+}
+
+.about-product-rating {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: #647d61;
+  font-size: 10px;
+}
+
+.about-stars {
+  color: #405c40;
+  font-size: 12px;
+  letter-spacing: 0;
+}
+
+/* Shop Button */
+
+.about-shop-button {
+  width: fit-content;
+  min-width: 73px;
+  min-height: 30px;
+  margin-top: 16px;
+  padding: 6px 11px;
+  border: 1px solid #8da28b;
+  color: #304832;
+  text-decoration: none;
+  font-size: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.about-shop-button:hover {
+  background-color: #8da28b;
+  color: #ffffff;
+}
+
+.about-shop-button span {
+  font-size: 16px;
+  line-height: 1;
+}
+
+/* =====================================
+   TABLET RESPONSIVE
+===================================== */
+
+@media (max-width: 900px) {
+
+  .about-products-content {
+    padding: 32px 4%;
+    grid-template-columns: 0.9fr 1.1fr;
+    column-gap: 25px;
+  }
+
+  .about-info h2 {
+    font-size: 26px;
+  }
+
+  .benefits-list {
+    gap: 6px 5px;
+  }
+
+  .benefit {
+    font-size: 9px;
+    padding: 5px 9px;
+  }
+
+  .about-product-grid {
+    gap: 12px;
+  }
+
+}
+
+/* =====================================
+   MOBILE RESPONSIVE
+===================================== */
+
+@media (max-width: 600px) {
+
+  .about-banner {
+    min-height: 55px;
+    padding: 12px 18px;
+  }
+
+  .about-banner p {
+    font-size: 15px;
+  }
+
+  .banner-arrow {
+    font-size: 28px;
+  }
+
+  .about-products-content {
+    padding: 30px 18px;
+    grid-template-columns: 1fr;
+    row-gap: 28px;
+  }
+
+  .about-info h2 {
+    max-width: 100%;
+    font-size: 28px;
+  }
+
+  .benefits-list {
+    max-width: 100%;
+    gap: 7px 6px;
+  }
+
+  .benefit {
+    font-size: 10px;
+    padding: 6px 11px;
+  }
+
+  .about-products-right {
+    max-width: 100%;
+  }
+
+  .about-product-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+  }
+
+  .about-product-info {
+    padding: 10px 8px;
+  }
+
+  .about-product-name,
+  .about-product-price {
+    font-size: 11px;
+  }
+
+  .about-shop-button {
+    margin-top: 18px;
+  }
+
+}
+
+/* Small Mobile */
+
+@media (max-width: 360px) {
+
+  .about-products-content {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+
+  .about-product-grid {
+    gap: 8px;
+  }
+
+  .about-product-info {
+    padding: 8px 6px;
+  }
+
+  .about-product-rating {
+    gap: 4px;
+    font-size: 9px;
+  }
+
+  .about-stars {
+    font-size: 10px;
+  }
+
+}
+
+
+
+
+
+/* Bigger Benefit Tags */
+
+.benefits-list {
+  gap: 8px 7px;
+}
+
+.benefit {
+  min-height: 27px;
+  padding: 7px 13px;
+  font-size: 11px;
+  border-radius: 30px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Mobile Benefit Tags */
+
+@media (max-width: 600px) {
+  .benefit {
+    min-height: 27px;
+    padding: 7px 13px;
+    font-size: 11px;
+  }
+}
+
+
+
+
+/* Desktop - Larger Benefit Tags */
+
+@media (min-width: 601px) {
+
+  .benefits-list {
+    gap: 9px 8px;
+  }
+
+  .benefit {
+    min-height: 40px;
+    padding: 8px 16px;
+    font-size: 12px;
+  }
+
+}
+
+
+
+
+/* =====================================
+   SERVICES SECTION
+===================================== */
+
+.services-section {
+  width: 100%;
+  background-color: #f1f5ee;
+  color: #304632;
+}
+
+/* =====================================
+   1. SKIN DIAGNOSIS
+===================================== */
+
+.diagnosis-section {
+  width: 100%;
+  min-height: 188px;
+  padding: 20px 10%;
+  display: grid;
+  grid-template-columns: 1fr 1.15fr;
+  align-items: center;
+  column-gap: 45px;
+}
+
+.diagnosis-image {
+  width: 100%;
+  height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.diagnosis-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+.diagnosis-content {
+  width: 100%;
+}
+
+.services-subtitle {
+  color: #91a58e;
+  font-size: 12px;
+  font-weight: 400;
+  margin: 0 0 7px;
+}
+
+.diagnosis-content h2 {
+  color: #263e2b;
+  font-family: Georgia, serif;
+  font-size: 27px;
+  font-weight: 400;
+  line-height: 1.12;
+  margin: 0 0 8px;
+}
+
+.diagnosis-description {
+  max-width: 350px;
+  color: #667b65;
+  font-size: 10px;
+  line-height: 1.5;
+  margin: 0 0 12px;
+}
+
+.services-button {
+  width: fit-content;
+  min-height: 25px;
+  padding: 5px 11px;
+  border: 1px solid #8da28b;
+  color: #304632;
+  text-decoration: none;
+  font-size: 9px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition: 0.3s ease;
+}
+
+.services-button:hover,
+.benefit-button:hover {
+  background-color: #8da28b;
+  color: #ffffff;
+}
+
+.services-button span,
+.benefit-button span {
+  font-size: 15px;
+  line-height: 1;
+}
+
+
+/* =====================================
+   2. PRODUCT TESTIMONIAL
+===================================== */
+
+.testimonial-section {
+  width: 100%;
+  min-height: 260px;
+  padding: 18px 6.5%;
+  border-top: 1px solid #dce6d8;
+  border-bottom: 1px solid #dce6d8;
+  display: grid;
+  grid-template-columns: 30% 70%;
+  align-items: center;
+  column-gap: 35px;
+}
+
+/* Testimonial Product Image */
+
+.testimonial-product {
+  width: 100%;
+  max-width: 145px;
+  height: 220px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.testimonial-product::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background-color: #e4ebdf;
+}
+
+.testimonial-product img {
+  position: relative;
+  z-index: 1;
+  width: 80%;
+  height: 90%;
+  object-fit: contain;
+  display: block;
+}
+
+/* Testimonial Text */
+
+.testimonial-content {
+  position: relative;
+  width: 100%;
+  padding: 3px 0;
+}
+
+.testimonial-label {
+  color: #8da28b;
+  font-size: 11px;
+  font-weight: 400;
+  margin: 0 0 25px;
+}
+
+.testimonial-stars {
+  color: #405c40;
+  font-size: 19px;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+}
+
+.testimonial-content blockquote {
+  color: #293f2e;
+  font-family: Georgia, serif;
+  font-size: 19px;
+  font-weight: 400;
+  line-height: 1.12;
+  margin: 0;
+  max-width: 500px;
+}
+
+.testimonial-author {
+  color: #91a58e;
+  font-family: Georgia, serif;
+  font-size: 9px;
+  font-style: italic;
+  margin: 18px 0 0;
+}
+
+.testimonial-arrow {
+  position: absolute;
+  right: 0;
+  top: 48%;
+  width: 27px;
+  height: 48px;
+  border: 1px solid #d5e0d1;
+  color: #526d50;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+}
+
+
+/* =====================================
+   3. BOTTOM BENEFITS
+===================================== */
+
+.services-benefits {
+  width: 100%;
+  min-height: 130px;
+  padding: 22px 5% 15px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.service-benefit {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 0 12px;
+  position: relative;
+}
+
+.service-benefit:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 25%;
+  height: 65%;
+  width: 1px;
+  background-color: #dce5d8;
+}
+
+.benefit-icon {
+  width: 30px;
+  height: 30px;
+  margin-bottom: 7px;
+  color: #8da28b;
+}
+
+.benefit-icon svg {
+  width: 100%;
+  height: 100%;
+}
+
+.benefit-small-title {
+  color: #91a58e;
+  font-size: 9px;
+  font-weight: 400;
+  margin: 0 0 4px;
+}
+
+.service-benefit h3 {
+  color: #405342;
+  font-family: Georgia, serif;
+  font-size: 13px;
+  font-weight: 400;
+  margin: 0 0 7px;
+}
+
+.benefit-button {
+  min-height: 23px;
+  min-width: 95px;
+  padding: 4px 9px;
+  border: 1px solid #8da28b;
+  color: #304632;
+  text-decoration: none;
+  font-size: 8px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  transition: 0.3s ease;
+}
+
+
+/* =====================================
+   TABLET RESPONSIVE
+===================================== */
+
+@media (max-width: 900px) {
+
+  .diagnosis-section {
+    padding-left: 7%;
+    padding-right: 7%;
+    column-gap: 25px;
+  }
+
+  .diagnosis-content h2 {
+    font-size: 25px;
+  }
+
+  .testimonial-section {
+    padding-left: 5%;
+    padding-right: 5%;
+    column-gap: 25px;
+  }
+
+  .testimonial-content blockquote {
+    font-size: 17px;
+  }
+
+  .testimonial-product {
+    max-width: 135px;
+  }
+
+}
+
+
+/* =====================================
+   MOBILE RESPONSIVE
+===================================== */
+
+@media (max-width: 600px) {
+
+  /* Diagnosis */
+
+  .diagnosis-section {
+    padding: 25px 20px 30px;
+    grid-template-columns: 1fr;
+    row-gap: 15px;
+    text-align: center;
+  }
+
+  .diagnosis-image {
+    height: 170px;
+  }
+
+  .diagnosis-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .diagnosis-content h2 {
+    font-size: 28px;
+  }
+
+  .diagnosis-description {
+    max-width: 340px;
+    font-size: 11px;
+  }
+
+  .services-button {
+    min-height: 30px;
+    font-size: 10px;
+  }
+
+
+  /* Testimonial */
+
+  .testimonial-section {
+    padding: 25px 20px;
+    grid-template-columns: 1fr;
+    row-gap: 22px;
+  }
+
+  .testimonial-product {
+    width: 145px;
+    height: 190px;
+  }
+
+  .testimonial-content {
+    max-width: 450px;
+    margin: 0 auto;
+    padding-right: 22px;
+  }
+
+  .testimonial-label {
+    margin-bottom: 15px;
+  }
+
+  .testimonial-stars {
+    font-size: 18px;
+  }
+
+  .testimonial-content blockquote {
+    font-size: 20px;
+    line-height: 1.2;
+  }
+
+  .testimonial-author {
+    margin-top: 15px;
+  }
+
+  .testimonial-arrow {
+    right: -2px;
+    top: 45%;
+  }
+
+
+  /* Bottom Benefits */
+
+  .services-benefits {
+    padding: 25px 15px;
+    grid-template-columns: 1fr;
+    row-gap: 25px;
+  }
+
+  .service-benefit {
+    padding: 0 5px 20px;
+  }
+
+  .service-benefit:not(:last-child)::after {
+    width: 65%;
+    height: 1px;
+    top: auto;
+    bottom: 0;
+    right: auto;
+  }
+
+  .benefit-icon {
+    width: 34px;
+    height: 34px;
+  }
+
+  .benefit-small-title {
+    font-size: 10px;
+  }
+
+  .service-benefit h3 {
+    font-size: 15px;
+  }
+
+  .benefit-button {
+    min-height: 27px;
+    font-size: 9px;
+  }
+
+}
+
+
+/* =====================================
+   SMALL MOBILE
+===================================== */
+
+@media (max-width: 360px) {
+
+  .diagnosis-section {
+    padding-left: 14px;
+    padding-right: 14px;
+  }
+
+  .diagnosis-content h2 {
+    font-size: 25px;
+  }
+
+  .testimonial-content blockquote {
+    font-size: 18px;
+  }
+
+}
+
+
+
+/* =====================================
+   SERVICES SECTION - DESKTOP FIX
+===================================== */
+
+/* Horizontal line at section start */
+
+.services-section {
+  border-top: 1px solid #dce6d8;
+}
+
+/* Make both images larger on desktop */
+
+@media (min-width: 901px) {
+
+  /* Diagnosis illustration */
+
+  .diagnosis-section {
+    min-height: 230px;
+    column-gap: 55px;
+  }
+
+  .diagnosis-image {
+    height: 205px;
+    max-width: 280px;
+    margin: 0 auto;
+  }
+
+  /* Testimonial product image */
+
+  .testimonial-product {
+    max-width: 180px;
+    height: 250px;
+  }
+
+  .testimonial-product img {
+    width: 85%;
+    height: 92%;
+  }
+
+}
+
+/* Tablet image adjustment */
+
+@media (min-width: 601px) and (max-width: 900px) {
+
+  .diagnosis-image {
+    height: 175px;
+  }
+
+  .testimonial-product {
+    max-width: 155px;
+    height: 230px;
+  }
+
+}
+
+
+
+/* =====================================
+   VELVETY FOOTER
+===================================== */
+
+.velvety-footer {
+  width: 100%;
+  background-color: #f1f5ee;
+  color: #304632;
+  border-top: 1px solid #dce5d8;
+}
+
+/* Newsletter */
+
+.newsletter-section {
+  min-height: 90px;
+  padding: 15px 6%;
+  background-color: #8da28b;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 25px;
+}
+
+.newsletter-section h2 {
+  color: #ffffff;
+  font-family: Georgia, serif;
+  font-size: 27px;
+  font-weight: 400;
+  line-height: 1.12;
+  margin: 0;
+}
+
+.newsletter-form {
+  width: 350px;
+  max-width: 48%;
+  min-height: 36px;
+  display: flex;
+  background-color: #ffffff;
+}
+
+.newsletter-form input[type="email"] {
+  width: 100%;
+  min-width: 0;
+  padding: 9px 12px;
+  border: none;
+  outline: none;
+  background: transparent;
+  color: #304632;
+  font-family: inherit;
+  font-size: 11px;
+}
+
+.newsletter-form input::placeholder {
+  color: #91a58e;
+}
+
+.newsletter-form button {
+  width: 43px;
+  flex-shrink: 0;
+  border: none;
+  border-left: 1px solid #dce5d8;
+  background-color: #ffffff;
+  color: #304632;
+  font-size: 23px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.newsletter-form button:hover {
+  background-color: #e4ebdf;
+}
+
+.hidden-field {
+  display: none;
+}
+
+/* Main Footer */
+
+.footer-main {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  min-height: 178px;
+  padding: 0 4%;
+}
+
+.footer-column {
+  padding: 20px 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 7px;
+  border-right: 1px solid #dce5d8;
+}
+
+.footer-column:last-of-type {
+  border-right: none;
+}
+
+/* Brand */
+
+.footer-logo {
+  color: #304632;
+  font-family: Georgia, serif;
+  font-size: 16px;
+  letter-spacing: 1px;
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  line-height: 1;
+}
+
+.footer-logo span {
+  font-family: Georgia, serif;
+  font-size: 8px;
+  font-style: italic;
+  letter-spacing: 0;
+  margin-top: 3px;
+}
+
+.opening-hours {
+  margin-top: 13px;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  font-size: 10px;
+  line-height: 1.3;
+}
+
+.opening-hours p {
+  color: #91a58e;
+  margin: 0 0 2px;
+}
+
+.footer-socials {
+  display: flex;
+  gap: 12px;
+  margin-top: auto;
+}
+
+.footer-socials a {
+  color: #536b52;
+  font-size: 15px;
+  text-decoration: none;
+}
+
+/* Footer Links */
+
+.footer-column h3 {
+  color: #91a58e;
+  font-family: Georgia, serif;
+  font-size: 13px;
+  font-weight: 400;
+  margin: 0 0 3px;
+}
+
+.footer-column > a:not(.footer-logo) {
+  color: #304632;
+  font-size: 10px;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.footer-column > a:not(.footer-logo):hover {
+  color: #91a58e;
+}
+
+/* Side Text */
+
+.footer-side-text {
+  position: absolute;
+  right: 9px;
+  top: 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  writing-mode: vertical-rl;
+  transform: translateY(-50%);
+  color: #536b52;
+  font-size: 7px;
+}
+
+/* Bottom Bar */
+
+.footer-bottom {
+  min-height: 32px;
+  padding: 8px 6%;
+  border-top: 1px solid #dce5d8;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+}
+
+.footer-bottom p {
+  color: #70836e;
+  font-size: 9px;
+  margin: 0;
+}
+
+.footer-bottom strong {
+  color: #304632;
+  font-weight: 500;
+}
+
+.footer-legal {
+  display: flex;
+  gap: 20px;
+}
+
+.footer-legal a {
+  color: #304632;
+  font-size: 9px;
+  text-decoration: none;
+}
+
+.newsletter-success {
+  color: #405c40;
+  font-size: 12px;
+  text-align: center;
+  margin: 0;
+}
+
+/* =====================================
+   TABLET RESPONSIVE
+===================================== */
+
+@media (max-width: 768px) {
+
+  .newsletter-section {
+    padding: 18px 4%;
+    gap: 15px;
+  }
+
+  .newsletter-section h2 {
+    font-size: 23px;
+  }
+
+  .newsletter-form {
+    max-width: 50%;
+  }
+
+  .footer-main {
+    padding: 0 3%;
+  }
+
+  .footer-column {
+    padding: 18px 7px;
+  }
+
+}
+
+/* =====================================
+   MOBILE RESPONSIVE
+===================================== */
+
+@media (max-width: 600px) {
+
+  .newsletter-section {
+    flex-direction: column;
+    text-align: center;
+    padding: 25px 18px;
+    gap: 18px;
+  }
+
+  .newsletter-section h2 {
+    font-size: 27px;
+  }
+
+  .newsletter-form {
+    width: 100%;
+    max-width: 380px;
+    min-height: 42px;
+  }
+
+  .newsletter-form input[type="email"] {
+    font-size: 12px;
+  }
+
+  .footer-main {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    padding: 0 10px;
+  }
+
+  .footer-column {
+    min-height: 175px;
+    padding: 22px 8px;
+    border-bottom: 1px solid #dce5d8;
+  }
+
+  .footer-column:nth-child(2) {
+    border-right: none;
+  }
+
+  .footer-column:nth-child(3) {
+    border-bottom: none;
+  }
+
+  .footer-column:nth-child(4) {
+    border-right: none;
+    border-bottom: none;
+  }
+
+  .footer-side-text {
+    display: none;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    padding: 13px 10px;
+    text-align: center;
+    gap: 10px;
+  }
+
+  .footer-legal {
+    gap: 18px;
+  }
+
+}
+
+/* Small Mobile */
+
+@media (max-width: 360px) {
+
+  .newsletter-section h2 {
+    font-size: 24px;
+  }
+
+  .footer-column > a:not(.footer-logo) {
+    font-size: 9px;
+  }
+
+}
+
